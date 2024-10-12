@@ -5,10 +5,13 @@ document.getElementById('decodeButton').addEventListener('click', function() {
     if (match) {
         const encodedData = match[1];
         const decodedData = decodeURIComponent(encodedData);
+        
+        // Mengganti %22 dengan " dan %2C dengan , menggunakan regex
         const output = decodedData
             .replace(/%22/g, '"')  // Mengganti %22 dengan "
             .replace(/%2C/g, ',');  // Mengganti %2C dengan ,
-
+        
+        // Menampilkan output ke textarea
         document.getElementById('output').value = output;
     } else {
         document.getElementById('output').value = 'Data tidak ditemukan!';
