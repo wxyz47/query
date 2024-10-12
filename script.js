@@ -1,13 +1,19 @@
 document.getElementById('decodeButton').addEventListener('click', function() {
-    const input = document.getElementById('input').value;
-    const urlPattern = /tgWebAppData=([^&]+)/;
-    const match = input.match(urlPattern);
-    
+    // Ambil input dari textarea
+    const inputText = document.getElementById('input').value;
+
+    // Mencari bagian tgWebAppData
+    const match = inputText.match(/tgWebAppData=(.*?)(?:&|$)/);
     if (match) {
-        // Decode the matched group
-        const decodedData = decodeURIComponent(match[1]);
-        document.getElementById('output').value = decodedData;
+        const encodedData = match[1];
+        // Decode data
+        const decodedData = decodeURIComponent(encodedData);
+        // Format output
+        const output = decodedData.replace(/%22/g, '"').replace(/%2C/g, ',');
+        
+        // Tampilkan output di elemen <pre>
+        document.getElementById('output').innerText = output;
     } else {
-        document.getElementById('output').value = 'tgWebAppData not found.';
+        document.getElementById('output').innerText = 'Data tidak ditemukan!';
     }
 });
