@@ -1,20 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Query Telegram Decoder</title>
+    <title>Telegram Query Decoder</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Query Telegram Decoder</h1>
-        <textarea id="input" placeholder="Paste your input here..." rows="10"></textarea>
-        <button id="decodeButton">Decode</button>
-        
-        <h2>Decoded Output</h2>
-        <textarea id="output" placeholder="Decoded output will appear here..." rows="10" readonly></textarea>
-        <button id="copyButton">Copy to Clipboard</button>
+        <h1>Telegram Query Decoder</h1>
+        <div>
+            <label for="input">Input:</label>
+            <textarea id="input" placeholder="Masukkan teks di sini..."></textarea>
+        </div>
+        <div class="button-group">
+            <button id="decodeButton">Decode</button>
+            <button id="copyButton">Salin Output</button>
+            <button id="clearButton">Hapus</button>
+        </div>
+        <div>
+            <label for="output">Output:</label>
+            <textarea id="output" readonly></textarea>
+        </div>
+    </div>
+    <div class="footer">
+        Made with ❤️ by <a href="https://www.instagram.com/wahyudi_com" target="_blank">Wxyz</a>
     </div>
 
     <script src="script.js"></script>
