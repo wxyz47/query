@@ -10,7 +10,7 @@ document.getElementById('decodeButton').addEventListener('click', function() {
         const decodedData = decodeURIComponent(encodedData);
         // Format output
         const output = decodedData.replace(/%22/g, '"').replace(/%2C/g, ',');
-        
+
         // Tampilkan output di elemen <pre>
         document.getElementById('output').innerText = output;
     } else {
