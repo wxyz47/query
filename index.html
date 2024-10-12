@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Query Telegram Decoder</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <h1>Query Telegram Decoder</h1>
-        <textarea id="input" rows="6" placeholder="Masukkan teks di sini..."></textarea>
+        <textarea id="input" placeholder="Paste your input here..." rows="10"></textarea>
         <button id="decodeButton">Decode</button>
-        <h2>Output:</h2>
-        <textarea id="output" rows="6" readonly></textarea>
+        
+        <h2>Decoded Output</h2>
+        <textarea id="output" placeholder="Decoded output will appear here..." rows="10" readonly></textarea>
+        <button id="copyButton">Copy to Clipboard</button>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
