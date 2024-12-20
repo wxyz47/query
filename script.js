@@ -16,7 +16,7 @@ document.getElementById('decodeButton').addEventListener('click', function() {
 
         document.getElementById('output').value = decodedData;
     } else {
-        document.getElementById('output').value = 'Data tidak ditemukan!';
+        document.getElementById('output').value = 'Query tidak ditemukan!';
     }
 });
 
